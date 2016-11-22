@@ -189,17 +189,16 @@ var pJS = function(tag_id, params){
   };
 
   pJS.fn.canvasSize = function(){
-    var body = document.getElementsByTagName('body')[0];
-    pJS.canvas.w = body.scrollWidth;
-    pJS.canvas.h = body.scrollHeight;
+    pJS.canvas.w = window.innerWidth;
+    pJS.canvas.h = window.innerHeight;
     pJS.canvas.el.width = pJS.canvas.w;
     pJS.canvas.el.height = pJS.canvas.h;
 
     if(pJS && pJS.interactivity.events.resize){
 
       window.addEventListener('resize', function(e){
-          pJS.canvas.w = body.scrollWidth;
-          pJS.canvas.h = body.scrollHeight;
+          pJS.canvas.w = window.innerWidth;
+          pJS.canvas.h = window.innerHeight;
           // pJS.canvas.w = pJS.canvas.el.offsetWidth;
           // pJS.canvas.h = pJS.canvas.el.offsetHeight;
 
